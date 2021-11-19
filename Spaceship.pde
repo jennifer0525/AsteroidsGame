@@ -11,8 +11,8 @@ class Spaceship extends Floater
     myYspeed = 0;
     corners = 4; 
     myPointDirection = 0;
-    private xCorners = new int[corners]; 
-    private yCorners = new int[corners];
+    xCorners = new int[corners]; // encapsulation or no?
+    yCorners = new int[corners];
     xCorners [0] = -8;  
     yCorners [0] = -8;
     xCorners [1] = 16;
