@@ -1,5 +1,5 @@
 //your variable declarations here
-Star [] sky = new Star [100];
+Star [] sky = new Star [200];
 Spaceship ship = new Spaceship();
 
 public void setup() 
@@ -17,7 +17,8 @@ public void draw()
     sky[i].show();
   }
   /* KEYS:
-  A: Turn
+  A: Turn Left
+  D: Turn Right
   Space: Accelerate in direction of A
   Shift: hyperspace
   P: Pause
@@ -26,6 +27,9 @@ public void draw()
   if (keyPressed){
     if (key == 'a' || key == 'A'){
       ship.turn(-10);
+    }
+    if (key == 'd' || key == 'D'){
+      ship.turn(10);
     }
     if (key == ' '){ // for space bar key
       ship.accelerate(0.4);
@@ -37,6 +41,7 @@ public void draw()
       ship.pause(0); // press space to unpause and gain movement
     }
   }
-  ship.move();
   ship.show();
+  ship.move();
 }
+// know how to initialize a spaceship that extends floater
